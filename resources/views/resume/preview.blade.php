@@ -8,6 +8,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ $user->firstname }} {{ $user->lastname }} - Aperçu CV</title>
+  <<link href="{{ asset('css/print.css') }}" rel="stylesheet" type="text/css" media="print" /> 
+
   <link href="https://fonts.googleapis.com/css?family=Caveat|Open+Sans:400,700" rel="stylesheet">
   <style>
             /* Color Palette
@@ -144,7 +146,7 @@
         -------------------------*/
         .education {
         background: linear-gradient(rgba(141, 153, 174, 0.8), rgba(141, 153, 174, 0.5)),
-                    url( {{ asset('img/Mahajanga.jpg') }}) no-repeat fixed;
+                    url( {{ asset('img/toronto.jpg') }}) no-repeat fixed;
         background-size: cover;
         }
         p + h3 {

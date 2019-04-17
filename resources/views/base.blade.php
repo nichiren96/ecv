@@ -11,7 +11,7 @@
        
         <link href="{{ asset('css/datepicker.css') }}" rel="stylesheet" type="text/css"/>  
 
-        <<link href="{{ asset('css/ecv.css') }}" rel="stylesheet" type="text/css" /> 
+        <link href="{{ asset('css/ecv.css') }}" rel="stylesheet" type="text/css" /> 
 
         <style>
             .main {
