@@ -27,3 +27,5 @@ Route::post('/users/{user}/interests', 'InterestController@store')->name('store_
  * PREVIEW THE RESUME
  */
 Route::get('/preview/{user_id}', 'PageController@preview')->name('create_preview');
+
+Route::get('/generate-pdf/{user_id}','PageController@generatePDF')->name('generate_pdf');
