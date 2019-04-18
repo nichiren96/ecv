@@ -200,7 +200,7 @@
 <body>
   <!-- // Intro -->
   <header id="about">
-    <a href="{{ route('generate_pdf', ['user' => Request::route('user_id')]) }}" class="btn download" o="alert('Oups! Payer avant de télécharger :) ')">Download PDF</a>
+    <a href="" class="btn download" onclick="alert('Oups! Payer avant de télécharger :) ')">Download PDF</a>
     <nav>
       <a href="#about">A propos</a>
       <a href="#work">Expériences</a>

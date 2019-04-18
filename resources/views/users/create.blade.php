@@ -39,7 +39,7 @@
                 
                     <div class="form-group">
                         <label for="birthday">Date de naissance:</label>
-                        <input type="text" class="form-control" name="birthday" id="birthday" />
+                        <input type="date" class="form-control" name="birthday" id="birthday" />
                     </div>
 
                     <div class="row">
@@ -110,7 +110,7 @@
         <script type="text/javascript">
             
             $(function(){
-            $('#birthday').datepicker({
+            $('#birthdays').datepicker({
                 inline: true,
                 //nextText: '&rarr;',
                 //prevText: '&larr;',

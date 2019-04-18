@@ -28,29 +28,31 @@ class PageController extends Controller
         $id = (int) $user_id;
         $user = User::find($user_id);
 
-        $name = $user->firstname.' '.$user->lastname;
-        $birthday = $user->birthday;
-        $city = $user->city;
-        $address =$user->address;
-        $email = $user->email;
-        $phone = $user->phone;
+        $experiences = $user->experiences;
+        $educations = $user->educations;
+        $skills = $user->skills;
+        $interests = $user->interests;
 
-        $data = ['name' => $name,
-                    'birthday' => $birthday,
-                    'city' =>$city,
-                    'address'=>$address,
-                    'email' => $email,
-                    'phone' =>$phone
-    
+        $data = ['name' => $user->firstname.' '.$user->lastname,
+                    'birthday' =>  $user->birthday,
+                    'city' =>$user->city,
+                    'address'=>$user->address,
+                    'email' => $user->email,
+                    'phone' => $user->phone,
+                    'experiences' => $experiences,
+                    'educations' => $educations,
+                    'skills' => $skills,
+                    'interests' => $interests
         ];
 
-        $filename = 'cv_'.$user->firstname.'_'.$user->lastname.'.pdf';
 
-
+        $filename = 'CV_'.$user->firstname.'_'.$user->lastname.'.pdf';
 
         $pdf = PDF::loadView('myPDF', $data);
 
         return $pdf->download($filename);
+
+        return view('myPDF', $data);
 
     }
 }
